@@ -6,5 +6,5 @@ if __name__ == "__main__":
         print("0 arguments.")
     else:
         print("{} argument{}".format(elem, "." if elem == 1 else "s:"))
-        for i in range(1, len(sys.argv)):
-            print("{}: {}".format(i, sys.argv[i]))
+        for i in range(elem):
+            print("{}: {}".format(i + 1, sys.argv[i + 1]))
