@@ -4,7 +4,9 @@ if __name__ == "__main__":
     elem = len(sys.argv) - 1
     if elem == 0:
         print("0 arguments.")
+    elif elem == 1:
+        print("1 argument:")
     else:
-        print("{} argument{}".format(elem, "." if elem == 1 else "s:"))
-        for i in range(elem):
-            print("{}: {}".format(i + 1, sys.argv[i + 1]))
+        print("{} arguments:".format(elem))
+    for i in range(elem):
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))
