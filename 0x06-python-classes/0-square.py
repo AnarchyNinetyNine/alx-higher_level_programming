@@ -5,10 +5,3 @@ class Square():
     An empty class that defines a square
 
     """
-    def __init__(self):
-
-        """
-        Initializes a new Square object.
-
-        """
-        pass
