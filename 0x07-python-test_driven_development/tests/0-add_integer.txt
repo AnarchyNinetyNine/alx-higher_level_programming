@@ -5,26 +5,26 @@ Using ``add_integer``
 ---------------------
 
 Import module:
-	>>> add_integer = __import__('add_integer').add_integer
+	>>> add_integer = __import__('0-add_integer').add_integer
 
 Test typical:
-	>>> dd_integer(5, 3)
+	>>> add_integer(5, 3)
         8
 
 Test floating_number_case_as_a_first_param:
 	>>> add_integer(2.5, 4)
         6
 
-Test floating_number_case_as_a_second_param
+Test floating_number_case_as_a_second_param:
         >>> add_integer(7, 8.2)
         15
 
-Test floating_number_case_in_both_params
+Test floating_number_case_in_both_params:
         >>> add_integer(10.5, 3.5)
-        14
+        13
 
 Test empty_param:
-	>>> add_integr(2)
+	>>> add_integer(2)
 	100
 
 Test negative_integer:

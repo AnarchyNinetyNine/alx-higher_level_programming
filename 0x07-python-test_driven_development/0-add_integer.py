@@ -8,8 +8,10 @@ def add_integer(a, b=98):
     Adds two integers.
 
     Args:
-        a (int or float): The first number to be added. If float, it will be casted to int.
-        b (int or float, optional): The second number to be added. Defaults to 98. If float, it will be casted to int.
+        a (int or float): The first number to be added.
+            If float, it will be casted to int.
+        b (int or float, optional): The second number to be added.
+            Defaults to 98. If float, it will be casted to int.
 
     Returns:
         int: The sum of `a` and `b`, casted to an integer.
@@ -25,7 +27,7 @@ def add_integer(a, b=98):
         >>> add_integer(7, 8.2)
         15
         >>> add_integer(10.5, 3.5)
-        14
+        13
         >>> add_integer('abc', 5)
         Traceback (most recent call last):
           ...
