@@ -39,4 +39,4 @@ def read_file(filename=""):
 
     """
     with open(filename, 'rt') as text_file:
-            print(text_file.read(), end="")
+        print(text_file.read(), end="")
