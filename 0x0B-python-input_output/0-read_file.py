@@ -39,5 +39,6 @@ def read_file(filename=""):
 
     """
     with open(filename, 'rt') as text_file:
-        for line in text_file:
-            print(line.strip())
+        if text_file:
+            for line in text_file:
+                print(line.strip())
