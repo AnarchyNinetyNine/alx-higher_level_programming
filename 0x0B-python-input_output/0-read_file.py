@@ -38,7 +38,6 @@ def read_file(filename=""):
         whitespace characters (like '\n').
 
     """
-    with open(filename, 'rt') as text_file:
-        if text_file:
-            for line in text_file:
-                print(line.strip())
+    with open(filename, encoding='utf-8') as text_file:
+        for line in text_file:
+            print(line.strip())
