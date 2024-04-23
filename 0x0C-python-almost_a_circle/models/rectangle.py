@@ -9,33 +9,6 @@
     Rectangle class inherits from the Base class and extends its
     functionality to manage rectangle-specific attributes.
 
-    Example:
-        To create a Rectangle instance:
-
-        >>> from models.rectangle import Rectangle
-
-        >>> rect1 = Rectangle(10, 5, 2, 3, id=1)
-
-        >>> print(rect1.width)
-        10
-
-        >>> print(rect1.height)
-        5
-
-        >>> print(rect1.x)
-        2
-
-        >>> print(rect1.y)
-        3
-
-        >>> print(rect1.id)
-        1
-
-        >>> rect1.width = 20
-
-        >>> print(rect1.width)
-        20
-
     Classes:
         Rectangle: A class representing a rectangle with width, height,
         position, and identifier.
