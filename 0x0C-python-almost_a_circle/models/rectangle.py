@@ -34,7 +34,6 @@ class Rectangle(Base):
                                position (default is 0).
             id (int, optional): The ID of the rectangle (default is None).
         """
-        # Call Base class constructor with the provided id
         super().__init__(id)
         self.width = width
         self.height = height
