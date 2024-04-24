@@ -120,9 +120,16 @@ class Rectangle(Base):
 
         Returns:
             int: The calculated area of the rectangle (width * height).
-
-        Raises:
-            ValueError: If either width or height is not a positive integer.
-
         """
         return self.width * self.height
+
+    def display(self):
+        """
+        Display the rectangle as a block of '#' characters.
+
+        Prints a representation of the rectangle using ASCII characters,
+        where each row consists of '#' characters repeated 'width' times.
+
+        """
+        for i in range(self.height):
+            print("#" * self.width)
