@@ -155,3 +155,16 @@ class Rectangle(Base):
         x = self.x
         y = self.y
         return f"[{className}] ({self.id}) {x}/{y} - {width}/{height}"
+
+    def update(self, *args):
+        """
+        Update object attributes with given values.
+
+        Args:
+            *args: Variable number of arguments to update the object
+                   attributes. The order of arguments should correspond
+                   to: (id, width, height, x, y) or a subset thereof.
+        """
+        valid_attributes = ["id", "width", "height", "x", "y"]
+        for attr_name, new_value in zip(valid_attributes, args):
+            setattr(self, attr_name, new_value)
