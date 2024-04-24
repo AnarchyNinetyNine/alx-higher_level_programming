@@ -36,69 +36,49 @@ class Rectangle(Base):
                                position (default is 0).
             id (int, optional): The ID of the rectangle (default is None).
         """
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be > 0")
-        self.__width = width
-
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be > 0")
-
-        self.__height = height
-
-        if not isinstance(x, int):
-            raise TypeError("x must be an integer")
-        if x < 0:
-            raise ValueError("x must be > 0")
-        self.__x = x
-
-        if not isinstance(y, int):
-            raise TypeError("y must be an integer")
-        if y < 0:
-            raise ValueError("y must be > 0")
-        self.__y = y
-
         super().__init__(id)
 
-        @property
-        def width(self):
-            """Getter method for width."""
-            return self.__width
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
-        @width.setter
-        def width(self, value):
-            """Setter method for width."""
-            self.__width = value
+    @property
+    def width(self):
+        """Getter method for width."""
+        return self.__width
 
-        @property
-        def height(self):
-            """Getter method for height."""
-            return self.__height
+    @property
+    def height(self):
+        """Getter method for height."""
+        return self.__height
 
-        @height.setter
-        def height(self, value):
-            """Setter method for height."""
-            self.__height = value
+    @property
+    def x(self):
+        """Getter method for x."""
+        return self.__x
 
-        @property
-        def x(self):
-            """Getter method for x."""
-            return self.__x
+    @property
+    def y(self):
+        """Getter method for y."""
+        return self.__y
 
-        @property
-        def y(self):
-            """Getter method for y."""
-            return self.__y
+    @width.setter
+    def width(self, value):
+        """Setter method for width."""
+        self.__width = value
 
-        @x.setter
-        def x(self, value):
-            """Setter method for x."""
-            self.__x = value
+    @height.setter
+    def height(self, value):
+        """Setter method for height."""
+        self.__height = value
 
-        @y.setter
-        def y(self, value):
-            """Setter method for y."""
-            self.__y = value
+    @x.setter
+    def x(self, value):
+        """Setter method for x."""
+        self.__x = value
+
+    @y.setter
+    def y(self, value):
+        """Setter method for y."""
+        self.__y = value
