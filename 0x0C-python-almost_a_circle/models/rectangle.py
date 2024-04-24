@@ -131,7 +131,11 @@ class Rectangle(Base):
         where each row consists of '#' characters repeated 'width' times.
 
         """
+        for i in range(self.y):
+            print()
+
         for i in range(self.height):
+            print((" " * self.x) if self.x else "", end="")
             print("#" * self.width)
 
     def __str__(self):
