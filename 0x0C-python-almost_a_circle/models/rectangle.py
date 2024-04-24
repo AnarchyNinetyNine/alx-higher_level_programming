@@ -47,9 +47,11 @@ class Rectangle(Base):
             if not isinstance(inp_i, int):
                 raise TypeError(f"{inpStr_i} must be an integer")
 
-            if inp_i < 0:
-                sign = ">=" if inpStr_i == "x" or inpStr_i == "y" else ">"
-                raise ValueError(f"{inpStr_i} must be {sign} 0")
+            if inp_i <= 0 and (inpStr_i == "width" or inpStr_i == "height"):
+                raise ValueError(f"{inpStr_i} must be > 0")
+
+            if inp_i < 0 and (inpStr_i == "x" or inpStr_i == "y"):
+                raise ValueError(f"{inpStr_i} must be >= 0")
 
         self.width = width
         self.height = height
@@ -81,7 +83,7 @@ class Rectangle(Base):
         """Setter method for width."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
 
@@ -90,7 +92,7 @@ class Rectangle(Base):
         """Setter method for height."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
