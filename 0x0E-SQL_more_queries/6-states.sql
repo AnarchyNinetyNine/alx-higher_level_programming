@@ -1,4 +1,4 @@
-- Script: 6-states.sql
+-- Script: 6-states.sql
 -- Script to create database hbtn_0d_usa and table states in MySQL server
 
 -- Create database if it does not exist
