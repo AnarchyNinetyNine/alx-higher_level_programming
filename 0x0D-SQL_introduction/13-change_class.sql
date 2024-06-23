@@ -1,0 +1,5 @@
+-- Script: 13-change_class.sql
+-- Script to remove all records with a score <= 5 from the table second_table
+
+DELETE FROM second_table
+WHERE score <= 5;
