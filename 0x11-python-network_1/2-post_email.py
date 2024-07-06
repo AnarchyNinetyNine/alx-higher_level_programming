@@ -12,16 +12,18 @@ import urllib.request
 import urllib.parse
 
 
-# Get the URL and email from command-line arguments
-url = sys.argv[1]
-params = {'email': sys.argv[2]}
+if __name__ == "__main__":
 
-# Encode the parameters for the POST request
-data = urllib.parse.urlencode(params).encode('utf-8')
+    # Get the URL and email from command-line arguments
+    url = sys.argv[1]
+    params = {'email': sys.argv[2]}
 
-# Create the request object with the URL and encoded data
-request = urllib.request.Request(url, data)
+    # Encode the parameters for the POST request
+    data = urllib.parse.urlencode(params).encode('utf-8')
 
-# Send the request and read the response
-with urllib.request.urlopen(request) as response:
-    print(response.read().decode('utf-8'))
+    # Create the request object with the URL and encoded data
+    request = urllib.request.Request(url, data)
+
+    # Send the request and read the response
+    with urllib.request.urlopen(request) as response:
+        print(response.read().decode('utf-8'))
