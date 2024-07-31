@@ -13,9 +13,14 @@ request(url, (error, response, body) => {
 
   // Parse the movie data
   const movie = JSON.parse(body);
+  const characters = movie.characters; // Array of character URLs
 
-  // Fetch each character's data
-  movie.characters.forEach((characterURL) => {
+  // Function to fetch character data
+  function fetchCharacter (index) {
+    if (index >= characters.length) return; // Base case: no more characters to fetch
+
+    const characterURL = characters[index];
+
     request(characterURL, (error, response, body) => {
       if (error) {
         console.error(error);
@@ -25,6 +30,12 @@ request(url, (error, response, body) => {
       // Parse and print the character's name
       const character = JSON.parse(body);
       console.log(character.name);
+
+      // Fetch the next character
+      fetchCharacter(index + 1);
     });
-  });
+  }
+
+  // Start fetching characters
+  fetchCharacter(0);
 });
