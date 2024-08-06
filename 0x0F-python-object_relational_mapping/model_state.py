@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+    This module defines the State class for interacting with
+    the 'states' table using SQLAlchemy.
+"""
+
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
